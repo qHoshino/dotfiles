@@ -1,0 +1,61 @@
+/************************************************
+ * ROFI Color theme
+ * User: qHoshino
+ * Copyright: 2025 qHoshino
+ ***********************************************/
+
+* {
+    border-color: rgba(85, 00, 153, 50%);
+    background-color: rgba(0, 0, 0, 0%);
+    background: rgba(9, 0, 20, 50%);
+    foreground: rgba(218, 205, 221, 100%);
+    selected-background: rgba(170, 153, 221, 50%);
+    font: "JetBrainsMonoNL Nerd Font Mono 12";
+}
+message {
+    text-color: @foreground;
+}
+window {
+    background-color: @background;
+    border:           1;
+    border-radius:    5px;
+    padding:          5;
+    width: 400px;
+}
+listview {
+    fixed-height: false;
+    spacing:      4px ;
+    scrollbar:    true;
+    padding:      2px 0px 0px ;
+    border: 2px 0 0 0;
+    border-color: @border-color;
+    margin: 2px 0 0 0;
+    height: 0px;
+    enabled: false;
+}
+case-indicator {
+    spacing:    0;
+    text-color: @foreground;
+}
+prompt {
+    spacing:    0;
+    text-color: @foreground;
+}
+textbox {
+    text-color: @foreground;
+    border: 2px 0 0 0;
+    border-color: @border-color;
+    font: "JetBrainsMono Nerd Font 9";
+}
+inputbar {
+    children:   [ prompt,textbox-prompt-colon,entry,case-indicator ];
+}
+entry {
+    text-color: @foreground;
+}
+textbox-prompt-colon {
+    expand:     false;
+    str:        "";
+    margin:     0px 0.3em 0em 0em ;
+    text-color: @foreground;
+}
